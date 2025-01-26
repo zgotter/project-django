@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "django-app"
+version = "0.1.0"
+description = "Django Application"
+authors = ["Sounghan Kim <shkim4738@gmail.com>"]
+
+[tool.poetry.dependencies] # 프로젝트의 주요 의존성 패키지들을 정의하는 섹션
+python = "^3.11"
+django = "^4.2.0"
+mongoengine = "^0.27.0"  # MongoDB ODM
+pymongo = "^4.6.0"  # 최신 버전의 pymongo
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies] # 개발 환경에서만 필요한 의존성 패키지들
+black = "^23.3.0" # Python 코드 포맷터
+isort = "^5.12.0" # Python import 문 정렬 도구
+flake8 = "^6.0.0" # Python 코드 린터
+
+[build-system] # 빌드 시스템 설정
+requires = ["poetry-core>=1.0.0"]  # Poetry 코어 의존성 요구사항
+build-backend = "poetry.core.masonry.api"  # Poetry 빌드 백엔드 설정
