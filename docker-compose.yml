@@ -3,11 +3,11 @@ version: '3.8'
 services:
   web:
     build:
-      context: ./app
+      context: ./web
       dockerfile: Dockerfile
     command: poetry run python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./app:/app
+      - ./web:/app
     ports:
       - 8000:8000
     env_file:
